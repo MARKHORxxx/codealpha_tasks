@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fullimage" id="fullimagebox">
+        <img src="img1.jpg" id="fullimage">
+        <span onclick="closefullimage()">X</span>
+    </div>
+    <div class="imagegallery">
+        <img src="img1.jpg" onclick="openfullimage(this.src)">
+        <img src="img2.jpg" onclick="openfullimage(this.src)">
+        <img src="img3.jpg" onclick="openfullimage(this.src)">
+        <img src="img4.jpg" onclick="openfullimage(this.src)">
+        <img src="img5.jpg" onclick="openfullimage(this.src)">
+    </div>
+
+    <script>
+        var fullimagebox=document.getElementById("fullimagebox");
+        var fullimage=document.getElementById("fullimage");
+
+        function openfullimage(pic){
+            fullimagebox.style.display="flex";
+            fullimage.src=pic;
+
+        }
+
+        function closefullimage(){
+            fullimagebox.style.display="none";
+
+        }
+
+
+    </script>
+    
+</body>
+</html> 
